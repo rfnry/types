@@ -14,13 +14,13 @@ def test_thread_invited_frame_roundtrip_json() -> None:
     alice = UserIdentity(id="u_alice", name="Alice", metadata={})
     bot = AssistantIdentity(id="a_bot", name="Bot", metadata={})
 
-    frame = ThreadInvitedFrame(thread=thread, added_member=alice, inviter=bot)
+    frame = ThreadInvitedFrame(thread=thread, added_member=alice, added_by=bot)
     raw = frame.model_dump(mode="json")
     assert raw["thread"]["id"] == "th_1"
     assert raw["added_member"]["id"] == "u_alice"
-    assert raw["inviter"]["id"] == "a_bot"
+    assert raw["added_by"]["id"] == "a_bot"
 
     parsed = ThreadInvitedFrame.model_validate(raw)
     assert parsed.thread.id == "th_1"
     assert parsed.added_member.id == "u_alice"
-    assert parsed.inviter.id == "a_bot"
+    assert parsed.added_by.id == "a_bot"

@@ -42,4 +42,4 @@ class ThreadInvitedFrame(BaseModel):
 
     thread: Thread
     added_member: Identity
-    inviter: Identity
+    added_by: Identity
