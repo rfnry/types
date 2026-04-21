@@ -5,7 +5,7 @@ from typing import Any, Literal
 
 from pydantic import BaseModel, ConfigDict, Field
 
-from rfnry_chat_protocol.identity import AssistantIdentity, Identity
+from rfnry_chat_protocol.identity import Identity
 
 RunStatus = Literal["pending", "running", "completed", "failed", "cancelled"]
 
@@ -22,7 +22,7 @@ class Run(BaseModel):
 
     id: str
     thread_id: str
-    assistant: AssistantIdentity
+    actor: Identity
     triggered_by: Identity
     status: RunStatus
     started_at: datetime

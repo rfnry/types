@@ -1,4 +1,4 @@
-import type { AssistantIdentity, Identity, IdentityWire } from './identity'
+import type { Identity, IdentityWire } from './identity'
 
 export type RunStatus = 'pending' | 'running' | 'completed' | 'failed' | 'cancelled'
 
@@ -10,7 +10,7 @@ export type RunError = {
 export type Run = {
   id: string
   threadId: string
-  assistant: AssistantIdentity
+  actor: Identity
   triggeredBy: Identity
   status: RunStatus
   startedAt: string
@@ -23,7 +23,7 @@ export type Run = {
 export type RunWire = {
   id: string
   thread_id: string
-  assistant: IdentityWire
+  actor: IdentityWire
   triggered_by: IdentityWire
   status: RunStatus
   started_at: string

@@ -7,7 +7,7 @@ import type {
   FormPartWire,
 } from './content'
 import type { Event, EventDraft, EventDraftWire, EventWire } from './event'
-import type { AssistantIdentity, Identity, IdentityWire } from './identity'
+import type { Identity, IdentityWire } from './identity'
 import type { Run, RunWire } from './run'
 import type { Thread, ThreadMember, ThreadMemberWire, ThreadWire } from './thread'
 
@@ -122,7 +122,7 @@ export function toRun(wire: RunWire): Run {
   return {
     id: wire.id,
     threadId: wire.thread_id,
-    assistant: toIdentity(wire.assistant) as AssistantIdentity,
+    actor: toIdentity(wire.actor),
     triggeredBy: toIdentity(wire.triggered_by),
     status: wire.status,
     startedAt: wire.started_at,

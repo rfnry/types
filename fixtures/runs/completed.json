@@ -4,7 +4,7 @@
   },
   "id": "run_fixture_completed",
   "thread_id": "t_fixture_1",
-  "assistant": {
+  "actor": {
     "id": "a_fixture_helper",
     "name": "Helper",
     "metadata": {},

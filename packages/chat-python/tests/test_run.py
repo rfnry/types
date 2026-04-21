@@ -13,7 +13,7 @@ def test_run_minimal() -> None:
     run = Run(
         id="run_1",
         thread_id="t_1",
-        assistant=assistant,
+        actor=assistant,
         triggered_by=user,
         status="running",
         started_at=datetime.now(UTC),
@@ -34,7 +34,7 @@ def test_run_rejects_invalid_status() -> None:
         Run(
             id="run_1",
             thread_id="t_1",
-            assistant=assistant,
+            actor=assistant,
             triggered_by=user,
             status="unknown",  # type: ignore[arg-type]
             started_at=datetime.now(UTC),

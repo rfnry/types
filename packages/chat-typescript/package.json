@@ -1,6 +1,6 @@
 {
   "name": "@rfnry/chat-protocol",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "type": "module",
   "description": "rfnry/chat — shared protocol types (typescript)",
   "author": "rfnry (https://github.com/rfnry)",

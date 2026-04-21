@@ -4,7 +4,7 @@ import type { Run, RunError, RunWire } from '../src/run'
 
 describe('run', () => {
   it('Run in-memory uses camelCase', () => {
-    const assistant: AssistantIdentity = {
+    const actor: AssistantIdentity = {
       role: 'assistant',
       id: 'a_1',
       name: 'A',
@@ -14,7 +14,7 @@ describe('run', () => {
     const run: Run = {
       id: 'run_1',
       threadId: 't_1',
-      assistant,
+      actor,
       triggeredBy: user,
       status: 'running',
       startedAt: '2026-04-21T12:00:00+00:00',
@@ -32,7 +32,7 @@ describe('run', () => {
     const wire: RunWire = {
       id: 'run_1',
       thread_id: 't_1',
-      assistant: wireIdentity,
+      actor: wireIdentity,
       triggered_by: wireUser,
       status: 'running',
       started_at: '2026-04-21T12:00:00+00:00',
