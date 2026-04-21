@@ -1,0 +1,52 @@
+{
+  "name": "@rfnry/chat-protocol",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "rfnry/chat — shared protocol types (typescript)",
+  "author": "rfnry (https://github.com/rfnry)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rfnry/types.git",
+    "directory": "packages/chat-typescript"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": ["rfnry", "chat", "protocol", "types"],
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "main": "./dist/main.cjs",
+  "module": "./dist/main.js",
+  "types": "./dist/main.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/main.d.ts",
+        "default": "./dist/main.js"
+      },
+      "require": {
+        "types": "./dist/main.d.cts",
+        "default": "./dist/main.cjs"
+      }
+    }
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "format": "biome format --write .",
+    "check": "biome check .",
+    "check:fix": "biome check --fix .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.12",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.4"
+  }
+}
