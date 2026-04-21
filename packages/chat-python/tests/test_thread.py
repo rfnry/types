@@ -36,6 +36,4 @@ def test_thread_member_requires_identity() -> None:
 def test_thread_rejects_unknown_fields() -> None:
     now = datetime.now(UTC)
     with pytest.raises(ValidationError):
-        Thread.model_validate(
-            {"id": "t_1", "created_at": now, "updated_at": now, "extra": "x"}
-        )
+        Thread.model_validate({"id": "t_1", "created_at": now, "updated_at": now, "extra": "x"})

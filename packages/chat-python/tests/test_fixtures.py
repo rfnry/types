@@ -88,7 +88,5 @@ def test_every_fixture_roundtrips_through_python_models() -> None:
             failures.append(f"{path}: parse/dump failed: {exc!r}")
             continue
         if redumped != raw:
-            failures.append(
-                f"{path}: roundtrip mismatch\n  original={raw}\n  redumped={redumped}"
-            )
+            failures.append(f"{path}: roundtrip mismatch\n  original={raw}\n  redumped={redumped}")
     assert not failures, "\n".join(failures)

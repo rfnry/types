@@ -43,15 +43,17 @@ def test_message_event_roundtrip() -> None:
 
 
 def test_thread_tenant_changed_uses_from_alias() -> None:
-    evt = ThreadTenantChangedEvent.model_validate({
-        "id": "evt_1",
-        "thread_id": "t_1",
-        "author": _user().model_dump(mode="json"),
-        "created_at": datetime.now(UTC).isoformat(),
-        "type": "thread.tenant_changed",
-        "from": {"org": "a"},
-        "to": {"org": "b"},
-    })
+    evt = ThreadTenantChangedEvent.model_validate(
+        {
+            "id": "evt_1",
+            "thread_id": "t_1",
+            "author": _user().model_dump(mode="json"),
+            "created_at": datetime.now(UTC).isoformat(),
+            "type": "thread.tenant_changed",
+            "from": {"org": "a"},
+            "to": {"org": "b"},
+        }
+    )
     assert evt.from_ == {"org": "a"}
     dumped = evt.model_dump(mode="json", by_alias=True)
     assert "from" in dumped
@@ -84,13 +86,15 @@ def test_parse_event_dispatches_by_type() -> None:
 
 def test_parse_event_rejects_unknown_type() -> None:
     with pytest.raises(ValidationError):
-        parse_event({
-            "id": "evt_1",
-            "thread_id": "t_1",
-            "author": _user().model_dump(mode="json"),
-            "created_at": datetime.now(UTC).isoformat(),
-            "type": "unknown",
-        })
+        parse_event(
+            {
+                "id": "evt_1",
+                "thread_id": "t_1",
+                "author": _user().model_dump(mode="json"),
+                "created_at": datetime.now(UTC).isoformat(),
+                "type": "unknown",
+            }
+        )
 
 
 def test_event_draft_optional_fields() -> None:

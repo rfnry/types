@@ -35,12 +35,14 @@ def test_document_part_minimal() -> None:
 
 
 def test_form_part_uses_schema_alias() -> None:
-    form = FormPart.model_validate({
-        "type": "form",
-        "form_id": "f_1",
-        "schema": {"type": "object"},
-        "status": "pending",
-    })
+    form = FormPart.model_validate(
+        {
+            "type": "form",
+            "form_id": "f_1",
+            "schema": {"type": "object"},
+            "status": "pending",
+        }
+    )
     assert form.json_schema == {"type": "object"}
     dumped = form.model_dump(mode="json", by_alias=True)
     assert "schema" in dumped
@@ -50,11 +52,13 @@ def test_form_part_uses_schema_alias() -> None:
 def test_parse_content_part_dispatches_by_type() -> None:
     text = parse_content_part({"type": "text", "text": "hi"})
     assert isinstance(text, TextPart)
-    image = parse_content_part({
-        "type": "image",
-        "url": "https://x",
-        "mime": "image/png",
-    })
+    image = parse_content_part(
+        {
+            "type": "image",
+            "url": "https://x",
+            "mime": "image/png",
+        }
+    )
     assert isinstance(image, ImagePart)
 
 
