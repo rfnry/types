@@ -1,0 +1,25 @@
+{
+  "__meta__": {
+    "model": "event.ThreadCreatedEvent"
+  },
+  "id": "evt_fixture_thread_created",
+  "thread_id": "t_fixture_1",
+  "run_id": null,
+  "author": {
+    "id": "u_fixture_alice",
+    "name": "Alice",
+    "metadata": {},
+    "role": "user"
+  },
+  "created_at": "2026-04-21T12:00:00Z",
+  "metadata": {},
+  "client_id": null,
+  "recipients": null,
+  "type": "thread.created",
+  "thread": {
+    "id": "t_fixture_1",
+    "tenant": {
+      "org": "acme"
+    }
+  }
+}

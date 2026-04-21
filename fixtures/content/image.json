@@ -1,0 +1,10 @@
+{
+  "__meta__": {
+    "model": "content.ImagePart"
+  },
+  "type": "image",
+  "url": "https://cdn.example.com/fixture.png",
+  "mime": "image/png",
+  "name": "fixture.png",
+  "size": 2048
+}

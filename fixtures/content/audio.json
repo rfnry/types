@@ -1,0 +1,11 @@
+{
+  "__meta__": {
+    "model": "content.AudioPart"
+  },
+  "type": "audio",
+  "url": "https://cdn.example.com/fixture.mp3",
+  "mime": "audio/mpeg",
+  "name": "fixture.mp3",
+  "size": 4096,
+  "duration_ms": 12000
+}

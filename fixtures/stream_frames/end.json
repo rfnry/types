@@ -1,0 +1,8 @@
+{
+  "__meta__": {
+    "model": "stream.StreamEndFrame"
+  },
+  "event_id": "evt_fixture_stream_1",
+  "thread_id": "t_fixture_1",
+  "error": null
+}

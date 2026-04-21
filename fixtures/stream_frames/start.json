@@ -1,0 +1,15 @@
+{
+  "__meta__": {
+    "model": "stream.StreamStartFrame"
+  },
+  "event_id": "evt_fixture_stream_1",
+  "thread_id": "t_fixture_1",
+  "run_id": "run_fixture_running",
+  "target_type": "message",
+  "author": {
+    "id": "a_fixture_helper",
+    "name": "Helper",
+    "metadata": {},
+    "role": "assistant"
+  }
+}

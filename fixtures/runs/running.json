@@ -1,0 +1,25 @@
+{
+  "__meta__": {
+    "model": "run.Run"
+  },
+  "id": "run_fixture_running",
+  "thread_id": "t_fixture_1",
+  "assistant": {
+    "id": "a_fixture_helper",
+    "name": "Helper",
+    "metadata": {},
+    "role": "assistant"
+  },
+  "triggered_by": {
+    "id": "u_fixture_alice",
+    "name": "Alice",
+    "metadata": {},
+    "role": "user"
+  },
+  "status": "running",
+  "started_at": "2026-04-21T12:00:00Z",
+  "completed_at": null,
+  "error": null,
+  "idempotency_key": null,
+  "metadata": {}
+}

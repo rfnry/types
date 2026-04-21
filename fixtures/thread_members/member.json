@@ -1,0 +1,21 @@
+{
+  "__meta__": {
+    "model": "thread.ThreadMember"
+  },
+  "thread_id": "t_fixture_1",
+  "identity_id": "u_fixture_alice",
+  "identity": {
+    "id": "u_fixture_alice",
+    "name": "Alice",
+    "metadata": {},
+    "role": "user"
+  },
+  "role": "member",
+  "added_at": "2026-04-21T12:00:00Z",
+  "added_by": {
+    "id": "a_fixture_helper",
+    "name": "Helper",
+    "metadata": {},
+    "role": "assistant"
+  }
+}

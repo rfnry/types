@@ -1,0 +1,28 @@
+{
+  "__meta__": {
+    "model": "run.Run"
+  },
+  "id": "run_fixture_failed",
+  "thread_id": "t_fixture_1",
+  "assistant": {
+    "id": "a_fixture_helper",
+    "name": "Helper",
+    "metadata": {},
+    "role": "assistant"
+  },
+  "triggered_by": {
+    "id": "u_fixture_alice",
+    "name": "Alice",
+    "metadata": {},
+    "role": "user"
+  },
+  "status": "failed",
+  "started_at": "2026-04-21T12:00:00Z",
+  "completed_at": "2026-04-21T12:00:05Z",
+  "error": {
+    "code": "timeout",
+    "message": "exceeded 120s"
+  },
+  "idempotency_key": null,
+  "metadata": {}
+}

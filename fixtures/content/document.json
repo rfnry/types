@@ -1,0 +1,10 @@
+{
+  "__meta__": {
+    "model": "content.DocumentPart"
+  },
+  "type": "document",
+  "url": "https://cdn.example.com/fixture.pdf",
+  "mime": "application/pdf",
+  "name": "fixture.pdf",
+  "size": 8192
+}

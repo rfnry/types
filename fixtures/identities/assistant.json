@@ -1,0 +1,9 @@
+{
+  "__meta__": {
+    "model": "identity.AssistantIdentity"
+  },
+  "id": "a_fixture_helper",
+  "name": "Helper",
+  "metadata": {},
+  "role": "assistant"
+}

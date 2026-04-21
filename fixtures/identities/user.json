@@ -1,0 +1,9 @@
+{
+  "__meta__": {
+    "model": "identity.UserIdentity"
+  },
+  "id": "u_fixture_alice",
+  "name": "Alice",
+  "metadata": {},
+  "role": "user"
+}

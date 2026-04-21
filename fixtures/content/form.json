@@ -1,0 +1,20 @@
+{
+  "__meta__": {
+    "model": "content.FormPart"
+  },
+  "type": "form",
+  "form_id": "f_fixture_1",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "email": {
+        "type": "string"
+      }
+    }
+  },
+  "status": "pending",
+  "values": null,
+  "answers_event_id": null,
+  "title": "Contact info",
+  "description": "Tell us how to reach you."
+}

@@ -1,0 +1,9 @@
+{
+  "__meta__": {
+    "model": "identity.SystemIdentity"
+  },
+  "id": "s_fixture_system",
+  "name": "system",
+  "metadata": {},
+  "role": "system"
+}

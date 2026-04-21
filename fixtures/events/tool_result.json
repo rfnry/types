@@ -1,0 +1,26 @@
+{
+  "__meta__": {
+    "model": "event.ToolResultEvent"
+  },
+  "id": "evt_fixture_tool_result",
+  "thread_id": "t_fixture_1",
+  "run_id": "run_fixture_running",
+  "author": {
+    "id": "a_fixture_helper",
+    "name": "Helper",
+    "metadata": {},
+    "role": "assistant"
+  },
+  "created_at": "2026-04-21T12:00:00Z",
+  "metadata": {},
+  "client_id": null,
+  "recipients": null,
+  "type": "tool.result",
+  "tool": {
+    "id": "c_fixture_1",
+    "result": {
+      "temperature": 72
+    },
+    "error": null
+  }
+}

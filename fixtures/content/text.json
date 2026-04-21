@@ -1,0 +1,7 @@
+{
+  "__meta__": {
+    "model": "content.TextPart"
+  },
+  "type": "text",
+  "text": "hello world"
+}
