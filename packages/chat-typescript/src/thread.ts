@@ -39,3 +39,15 @@ export type ThreadPatch = {
   tenant?: TenantScope
   metadata?: Record<string, unknown>
 }
+
+export type ThreadInvitedFrame = {
+  thread: Thread
+  addedMember: Identity
+  addedBy: Identity
+}
+
+export type ThreadInvitedFrameWire = {
+  thread: ThreadWire
+  added_member: IdentityWire
+  added_by: IdentityWire
+}

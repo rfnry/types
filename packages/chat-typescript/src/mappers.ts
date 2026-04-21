@@ -9,7 +9,14 @@ import type {
 import type { Event, EventDraft, EventDraftWire, EventWire } from './event'
 import type { Identity, IdentityWire } from './identity'
 import type { Run, RunWire } from './run'
-import type { Thread, ThreadMember, ThreadMemberWire, ThreadWire } from './thread'
+import type {
+  Thread,
+  ThreadInvitedFrame,
+  ThreadInvitedFrameWire,
+  ThreadMember,
+  ThreadMemberWire,
+  ThreadWire,
+} from './thread'
 
 export function toIdentity(wire: IdentityWire): Identity {
   return {
@@ -205,5 +212,13 @@ export function toEventDraftWire(domain: EventDraft): EventDraftWire {
     content: domain.content?.map(toContentPartWire),
     metadata: domain.metadata,
     recipients: domain.recipients ?? null,
+  }
+}
+
+export function toThreadInvitedFrame(wire: ThreadInvitedFrameWire): ThreadInvitedFrame {
+  return {
+    thread: toThread(wire.thread),
+    addedMember: toIdentity(wire.added_member),
+    addedBy: toIdentity(wire.added_by),
   }
 }
