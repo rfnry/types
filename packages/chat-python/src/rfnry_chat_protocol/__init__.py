@@ -43,7 +43,12 @@ from rfnry_chat_protocol.stream import (
     StreamTargetType,
 )
 from rfnry_chat_protocol.tenant import TenantScope, matches
-from rfnry_chat_protocol.thread import Thread, ThreadMember, ThreadPatch
+from rfnry_chat_protocol.thread import (
+    Thread,
+    ThreadInvitedFrame,
+    ThreadMember,
+    ThreadPatch,
+)
 
 __all__ = [
     "AssistantIdentity",
@@ -75,6 +80,7 @@ __all__ = [
     "TextPart",
     "Thread",
     "ThreadCreatedEvent",
+    "ThreadInvitedFrame",
     "ThreadMember",
     "ThreadMemberAddedEvent",
     "ThreadMemberRemovedEvent",

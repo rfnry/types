@@ -35,3 +35,11 @@ class ThreadMember(BaseModel):
     role: str = "member"
     added_at: datetime
     added_by: Identity
+
+
+class ThreadInvitedFrame(BaseModel):
+    model_config = ConfigDict(extra="forbid", frozen=True)
+
+    thread: Thread
+    added_member: Identity
+    inviter: Identity
