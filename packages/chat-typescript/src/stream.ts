@@ -1,4 +1,4 @@
-import type { AssistantIdentity, IdentityWire } from './identity'
+import type { Identity, IdentityWire } from './identity'
 
 export type StreamTargetType = 'message' | 'reasoning'
 
@@ -12,7 +12,7 @@ export type StreamStartFrame = {
   threadId: string
   runId: string
   targetType: StreamTargetType
-  author: AssistantIdentity
+  author: Identity
 }
 
 export type StreamStartFrameWire = {

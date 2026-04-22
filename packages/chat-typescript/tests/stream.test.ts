@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import type { AssistantIdentity } from '../src/identity'
+import type { AssistantIdentity, UserIdentity } from '../src/identity'
 import type {
   StreamDeltaFrame,
   StreamDeltaFrameWire,
@@ -28,6 +28,24 @@ describe('stream', () => {
     }
     expect(frame.eventId).toBe('evt_1')
     expect(frame.targetType).toBe('message')
+  })
+
+  it('StreamStartFrame accepts any Identity (e.g. user)', () => {
+    const user: UserIdentity = {
+      role: 'user',
+      id: 'u_alice',
+      name: 'Alice',
+      metadata: {},
+    }
+    const frame: StreamStartFrame = {
+      eventId: 'evt_1',
+      threadId: 't_1',
+      runId: 'run_1',
+      targetType: 'message',
+      author: user,
+    }
+    expect(frame.author.id).toBe('u_alice')
+    expect(frame.author.role).toBe('user')
   })
 
   it('StreamStartFrameWire uses snake_case', () => {
