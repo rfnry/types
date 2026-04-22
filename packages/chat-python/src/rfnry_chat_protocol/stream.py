@@ -4,7 +4,7 @@ from typing import Literal
 
 from pydantic import BaseModel, ConfigDict
 
-from rfnry_chat_protocol.identity import AssistantIdentity
+from rfnry_chat_protocol.identity import Identity
 
 StreamTargetType = Literal["message", "reasoning"]
 
@@ -23,7 +23,7 @@ class StreamStartFrame(BaseModel):
     thread_id: str
     run_id: str
     target_type: StreamTargetType
-    author: AssistantIdentity
+    author: Identity
 
 
 class StreamDeltaFrame(BaseModel):
