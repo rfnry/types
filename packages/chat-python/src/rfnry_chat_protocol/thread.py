@@ -26,6 +26,14 @@ class ThreadPatch(BaseModel):
     metadata: dict[str, Any] | None = None
 
 
+class ThreadDraft(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    tenant: TenantScope = Field(default_factory=dict)
+    metadata: dict[str, Any] = Field(default_factory=dict)
+    client_id: str | None = None
+
+
 class ThreadMember(BaseModel):
     model_config = ConfigDict(extra="forbid", frozen=True)
 

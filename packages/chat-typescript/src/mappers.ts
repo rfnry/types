@@ -11,6 +11,8 @@ import type { Identity, IdentityWire } from './identity'
 import type { Run, RunWire } from './run'
 import type {
   Thread,
+  ThreadDraft,
+  ThreadDraftWire,
   ThreadInvitedFrame,
   ThreadInvitedFrameWire,
   ThreadMember,
@@ -213,6 +215,14 @@ export function toEventDraftWire(domain: EventDraft): EventDraftWire {
     metadata: domain.metadata,
     recipients: domain.recipients ?? null,
   }
+}
+
+export function toThreadDraftWire(domain: ThreadDraft): ThreadDraftWire {
+  const wire: ThreadDraftWire = {}
+  if (domain.tenant !== undefined) wire.tenant = domain.tenant
+  if (domain.metadata !== undefined) wire.metadata = domain.metadata
+  if (domain.clientId !== undefined) wire.client_id = domain.clientId
+  return wire
 }
 
 export function toThreadInvitedFrame(wire: ThreadInvitedFrameWire): ThreadInvitedFrame {

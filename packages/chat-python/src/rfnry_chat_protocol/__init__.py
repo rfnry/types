@@ -45,6 +45,7 @@ from rfnry_chat_protocol.stream import (
 from rfnry_chat_protocol.tenant import TenantScope, matches
 from rfnry_chat_protocol.thread import (
     Thread,
+    ThreadDraft,
     ThreadInvitedFrame,
     ThreadMember,
     ThreadPatch,
@@ -80,6 +81,7 @@ __all__ = [
     "TextPart",
     "Thread",
     "ThreadCreatedEvent",
+    "ThreadDraft",
     "ThreadInvitedFrame",
     "ThreadMember",
     "ThreadMemberAddedEvent",

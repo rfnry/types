@@ -5,6 +5,9 @@ TenantScope = dict[str, str]
 
 def matches(thread_tenant: TenantScope, identity_tenant: TenantScope) -> bool:
     for key, value in thread_tenant.items():
-        if identity_tenant.get(key) != value:
+        iv = identity_tenant.get(key)
+        if iv == "*":
+            continue
+        if iv != value:
             return False
     return True

@@ -40,6 +40,18 @@ export type ThreadPatch = {
   metadata?: Record<string, unknown>
 }
 
+export type ThreadDraft = {
+  tenant?: TenantScope
+  metadata?: Record<string, unknown>
+  clientId?: string
+}
+
+export type ThreadDraftWire = {
+  tenant?: TenantScope
+  metadata?: Record<string, unknown>
+  client_id?: string
+}
+
 export type ThreadInvitedFrame = {
   thread: Thread
   addedMember: Identity
