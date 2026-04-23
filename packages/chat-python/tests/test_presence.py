@@ -19,6 +19,9 @@ def test_presence_snapshot_round_trips():
     payload = snap.model_dump(mode="json", by_alias=True)
     parsed = PresenceSnapshot.model_validate(payload)
     assert {m.id for m in parsed.members} == {"u_a", "agent-a"}
+    by_id = {m.id: m for m in parsed.members}
+    assert isinstance(by_id["u_a"], UserIdentity)
+    assert isinstance(by_id["agent-a"], AssistantIdentity)
 
 
 def test_presence_joined_frame_round_trips():
@@ -40,3 +43,4 @@ def test_presence_left_frame_round_trips():
     payload = frame.model_dump(mode="json", by_alias=True)
     parsed = PresenceLeftFrame.model_validate(payload)
     assert parsed.identity.id == "agent-a"
+    assert parsed.at == frame.at

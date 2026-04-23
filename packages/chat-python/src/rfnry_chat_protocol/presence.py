@@ -10,7 +10,7 @@ from rfnry_chat_protocol.identity import Identity
 class PresenceSnapshot(BaseModel):
     """Initial snapshot of identities currently online within a tenant scope."""
 
-    model_config = ConfigDict(populate_by_name=True)
+    model_config = ConfigDict(extra="forbid", frozen=True, populate_by_name=True)
 
     members: list[Identity]
 
@@ -18,7 +18,7 @@ class PresenceSnapshot(BaseModel):
 class PresenceJoinedFrame(BaseModel):
     """Transient frame: an identity went from 0 to 1 active sockets."""
 
-    model_config = ConfigDict(populate_by_name=True)
+    model_config = ConfigDict(extra="forbid", frozen=True, populate_by_name=True)
 
     identity: Identity
     at: datetime
@@ -27,7 +27,7 @@ class PresenceJoinedFrame(BaseModel):
 class PresenceLeftFrame(BaseModel):
     """Transient frame: an identity went from 1 to 0 active sockets."""
 
-    model_config = ConfigDict(populate_by_name=True)
+    model_config = ConfigDict(extra="forbid", frozen=True, populate_by_name=True)
 
     identity: Identity
     at: datetime
