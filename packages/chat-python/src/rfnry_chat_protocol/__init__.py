@@ -34,6 +34,11 @@ from rfnry_chat_protocol.identity import (
     UserIdentity,
     parse_identity,
 )
+from rfnry_chat_protocol.presence import (
+    PresenceJoinedFrame,
+    PresenceLeftFrame,
+    PresenceSnapshot,
+)
 from rfnry_chat_protocol.run import Run, RunError, RunStatus
 from rfnry_chat_protocol.stream import (
     StreamDeltaFrame,
@@ -63,6 +68,9 @@ __all__ = [
     "Identity",
     "ImagePart",
     "MessageEvent",
+    "PresenceJoinedFrame",
+    "PresenceLeftFrame",
+    "PresenceSnapshot",
     "ReasoningEvent",
     "Run",
     "RunCancelledEvent",
